@@ -78,7 +78,7 @@ class Share extends AbstractShare {
 
 	protected function getConnection() {
 		$command = sprintf(
-			'%s%s -t %s %s %s %s',
+			'exec %s%s -t %s %s %s %s',
 			$this->system->getStdBufPath() ? $this->system->getStdBufPath() . ' -o0 ' : '',
 			$this->system->getSmbclientPath(),
 			$this->server->getOptions()->getTimeout(),
